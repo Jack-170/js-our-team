@@ -66,3 +66,45 @@ for (let i = 0; i < arrayMembri.length; i++) {
 }
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sotto forma di stringhe
+
+const membriTeam = document.getElementById("membri-team");
+
+for (let i = 0; i < arrayMembri.length; i++){
+
+    const membro = arrayMembri[i];
+
+    // creo un div che dovrà contenere un membro
+    const membroDiv = document.createElement('div');
+
+    // ridichiaro le proprietà dell'oggetto
+
+    let nomeMebro = membro["nome e cognome"];
+    let ruoloMembro = membro.ruolo;
+    let pathMembro = membro.nomeimg;
+
+
+    // creo il contenuto da inserire nel div
+
+    const paragrafoNome = document.createElement('p');
+    paragrafoNome.textContent = "Nome e cognome: " + nomeMebro;
+
+
+    const paragrafoRuolo = document.createElement('p');
+    paragrafoRuolo.textContent = "Ruolo: " + ruoloMembro;
+    
+    const paragrafoPath = document.createElement('p');
+    paragrafoPath.textContent = "Nome immagine: " + pathMembro;
+
+    const lineaSeparatrice = document.createElement('hr');
+
+    // adesso inserisco tutto nel div
+
+    membroDiv.append(paragrafoNome);
+    membroDiv.append(paragrafoRuolo);
+    membroDiv.append(paragrafoPath);
+    membroDiv.append(lineaSeparatrice);
+
+
+    // inserisco i div con il contenuto(si spera) dentro il div principale
+    membriTeam.appendChild(membroDiv);
+}
