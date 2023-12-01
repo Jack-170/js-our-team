@@ -1,0 +1,21 @@
+/* stili generali pagina */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* stili x img */
+
+.boximg{
+    width: 200px;
+    height: 150px;
+}
+
+.imgmembro{
+    width: 100%;
+    height: 100%;
+}
+
